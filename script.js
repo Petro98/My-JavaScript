@@ -8,9 +8,6 @@ console.log(typeof booll);
 let undefinedd;
 console.log(typeof undefinedd);
 
-// let nulll = null;
-// console.log(typeof nulll);
-
 let biglntt = 1234234n;
 console.log(typeof biglntt);
 
@@ -38,16 +35,15 @@ console.log(typeof String(r));
 let re = "10";
 console.log(typeof Number(re));
 
-let ree = "10";
-console.log(typeof Boolean(ree));
+let ree = 0;
+console.log(Boolean(ree));
 
 let a = prompt('Ведіть число',);
 let b = prompt('Ведіть число',);
-alert(+a + +b);
+alert(+a + +a);
 
 let d = prompt('Ведіть число',);
-let f = 5;
-alert(d / f);
+alert(+d / 5);
 
 let conf = confirm("Нажми");
 console.log(conf);
