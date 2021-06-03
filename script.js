@@ -47,3 +47,6 @@ alert(+d / 5);
 
 let conf = confirm("Нажми");
 console.log(conf);
+
+let block1 = null;
+console.log(block1);
