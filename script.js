@@ -28,6 +28,8 @@ console.log(typeof funcMy);
 
 let block = document.querySelector('Info');
 console.log(block);
+let block1 = null;
+console.log(block1);
 
 let r = 10;
 console.log(typeof String(r));
@@ -39,7 +41,7 @@ let ree = 0;
 console.log(Boolean(ree));
 
 let a = prompt('Ведіть число',);
-let b = prompt('Ведіть число',);
+b = prompt('Ведіть число',);
 alert(+a + +a);
 
 let d = prompt('Ведіть число',);
@@ -48,5 +50,5 @@ alert(+d / 5);
 let conf = confirm("Нажми");
 console.log(conf);
 
-let block1 = null;
-console.log(block1);
+let s = 10, n = "project";
+console.log(s * n);
