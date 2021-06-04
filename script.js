@@ -41,7 +41,7 @@ let ree = 0;
 console.log(Boolean(ree));
 
 let a = prompt('Ведіть число',);
-b = prompt('Ведіть число',);
+// b = prompt('Ведіть число',);
 alert(+a + +a);
 
 let d = prompt('Ведіть число',);
@@ -50,5 +50,5 @@ alert(+d / 5);
 let conf = confirm("Нажми");
 console.log(conf);
 
-let s = 10, n = "project";
-console.log(s * n);
+// let s = 10, n = "project";
+// console.log(s * n);
