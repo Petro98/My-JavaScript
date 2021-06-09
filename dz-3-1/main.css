@@ -1,5 +1,5 @@
 body{
-background-color: rgb(235, 235, 235);
+background-color: rgb(17, 13, 13);
 }
 .press{
 	height: 100vh;
@@ -9,10 +9,19 @@ background-color: rgb(235, 235, 235);
 
 button {
 
-	width: 512px;
-	height: 512px;
-	background: url('pngwing.com.png') 50% / 100% auto no-repeat;
+	width: 500px;
+	height: 500px;
+	background: url('pngwing.com.png') 50% / 120% 120% no-repeat;
+	background-color: blueviolet;
+	border-radius: 160px;
 	align-self: center;
    padding: 0px;
 	border: 0px;
+	transform:scale(0.6) rotate(180deg);
+	transition-duration: .6s;
+}
+
+button:hover{
+	transform: rotate(360deg) scale(1);
+	transition-duration: .6s;
 }
