@@ -21,7 +21,7 @@ function game() {
 			} else {
 			}
 		} else if (bb < a) {
-			alert('ведіть чило з правельним кроком!!!')
+			alert('ведіть чило з правильним кроком!!!')
 			const result = confirm('Продовжити гру??');
 			if (result) {
 				game();
