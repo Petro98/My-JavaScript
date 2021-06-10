@@ -1,8 +1,8 @@
 
 
 function game() {
-	let a = prompt('ведіть початкове число не більше 3');
-	if (a.trim() == "" || isNaN(parseInt(a)) || a < 0) {
+	let a = prompt('ведіть початкове число');
+	if (a.trim() == "" || isNaN(parseInt(a))) {
 		alert('error');
 		const result = confirm('Продовжити гру??');
 		if (result) {
@@ -11,9 +11,17 @@ function game() {
 		}
 	} else {
 		let b = prompt('ведіть число з кроком 10');
-		let bb = +a + +10;
-		if (b.trim() == "" || isNaN(parseInt(b)) || b < 0 || bb > b) {
+		// let bb = +a + +10;
+		let bb = b - 9;
+		if (b.trim() == "" || isNaN(parseInt(b))) {
 			alert('error');
+			const result = confirm('Продовжити гру??');
+			if (result) {
+				game();
+			} else {
+			}
+		} else if (bb < a) {
+			alert('ведіть чило з правельним кроком!!!')
 			const result = confirm('Продовжити гру??');
 			if (result) {
 				game();
@@ -23,7 +31,7 @@ function game() {
 			let want_1 = Math.floor(Math.random() * (+a - +b) + +b);
 			let i = 4;
 			while (i > 0) {
-				let look = prompt(`В тебе залишилася ${i} спроба`);
+				let look = prompt(`В тебе залишилася ${i} спроби`);
 				let work = (look == want_1);
 				if (work) {
 					alert('ура ти молодець');

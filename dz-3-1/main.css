@@ -13,7 +13,7 @@ button {
 	height: 500px;
 	background: url('pngwing.com.png') 50% / 120% 120% no-repeat;
 	background-color: blueviolet;
-	border-radius: 160px;
+	border-radius: 240px;
 	align-self: center;
    padding: 0px;
 	border: 0px;
@@ -24,4 +24,6 @@ button {
 button:hover{
 	transform: rotate(360deg) scale(1);
 	transition-duration: .6s;
+	box-shadow: 0 0 10px aliceblue;
+	background-color: rgb(182, 76, 120);
 }
