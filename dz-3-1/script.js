@@ -12,7 +12,7 @@ function game() {
 	} else {
 		let b = prompt('ведіть число з кроком 10');
 		// let bb = +a + +10;
-		let bb = b - 9;
+		let bb = b - 10;
 		if (b.trim() == "" || isNaN(parseInt(b))) {
 			alert('error');
 			const result = confirm('Продовжити гру??');
@@ -20,7 +20,7 @@ function game() {
 				game();
 			} else {
 			}
-		} else if (bb < a) {
+		} else if (bb != a) {
 			alert('ведіть чило з правильним кроком!!!')
 			const result = confirm('Продовжити гру??');
 			if (result) {
