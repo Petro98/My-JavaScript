@@ -12,17 +12,16 @@ console.log(arr.flat(Infinity));
 // 2.================================================
 // метод sort
 const array = [2, 5, 55, 88, 4, 77, 99,];
-console.log(array.sort((a, b) => a - b).join(''));
-console.log(array.sort((a, b) => b - a).toString());
-console.log(Math.max.apply(0 , array))
+console.log(array.sort((a, b) => a - b));
+console.log(array.sort((a, b) => b - a));
 
 
 // 3.================================================
 // метод reduce + map
 const arrayOne = [1, 2, 3, 4,];
 let value = arrayOne.reduce((previous, item) => (previous + item + 5), 0);
-let arraySum = arrayOne.map((item) => (item + 10)).reduce((acc , curr) => (acc + curr) , 0);
-console.log(value ,arraySum);
+let arraySum = arrayOne.map((item) => (item + 10)).reduce((acc, curr) => (acc + curr), 0);
+console.log(value, arraySum);
 
 
 // 4 
