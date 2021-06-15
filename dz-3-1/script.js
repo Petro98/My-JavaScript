@@ -12,7 +12,7 @@ function game() {
 	} else {
 		let b = prompt('ведіть число з кроком 10');
 		// let bb = +a + +10;
-		let bb = b - 10;
+		let step = b - 10;
 		if (b.trim() == "" || isNaN(parseInt(b))) {
 			alert('error');
 			const result = confirm('Продовжити гру??');
@@ -20,7 +20,7 @@ function game() {
 				game();
 			} else {
 			}
-		} else if (bb != a) {
+		} else if (step != a) {
 			alert('ведіть чило з правильним кроком!!!');
 			const result = confirm('Продовжити гру??');
 			if (result) {
@@ -28,12 +28,12 @@ function game() {
 			} else {
 			}
 		} else {
-			let want_1 = Math.floor(Math.random() * (+a - +b) + +b);
-			console.log(want_1);
+			let random = Math.floor(Math.random() * (+a - +b) + +b);
+			console.log(random);
 			let i = 4;
 			while (i > 0) {
-				let look = prompt(`В тебе залишилася ${i} спроби`);
-				let work = (look == want_1);
+				let attempts = prompt(`В тебе залишилася ${i} спроби`);
+				let work = (attempts == random);
 				if (work) {
 					alert('Щоб забрати приз 1 btc!!! заплатіть комісію 1$. Карта: 5363542308856229');
 					const result = confirm('Продовжити гру??');
