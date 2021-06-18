@@ -12,6 +12,19 @@ function want() {
 want()
 
 
+
+var arrayA = ["h","e","l","l","o"];
+var arrayB = [];
+function copyArray(oldArray, newArray) {         
+   oldArray.forEach((item,index) => {                         
+   newArray.push(oldArray[oldArray.length-1-index]); 
+   });
+}
+
+copyArray(arrayA, arrayB);
+console.log(arrayB.join(''))
+
+
 // 2==============================================
 // work with an array
 let obj = {
