@@ -1,3 +1,4 @@
+
 const form = document.getElementById('form')
 			const name = form.querySelector('[name="name"]'),
 				surname = form.querySelector('[name="surname"]'),
@@ -9,7 +10,7 @@ const form = document.getElementById('form')
 				conclusionSum = (a) => (document.querySelector('.container_text').innerHTML += a)
 // масив відвідувачів===============================================
 let arrya = [];
-// список учасників
+// список учасників==================================================
 document.querySelector("#elemm").onclick = function () {
 	conclusion('')
 	console.log(arrya);
@@ -51,7 +52,7 @@ function callFunction() {
 	let namee = form.querySelector('[name="name"]').value
 		if (typeof(namee) == 'string' && namee.trim() && namee != '') {
 			retrieveFormValue()
-	}else{alert('Ведіть ім`я')}
+	}else{conclusion(('<h1>Ведіть ім`я</h1>'))}
 	function retrieveFormValue() {
 	const values = {
 		name: name.value,
