@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container_form">
+		<div class="box_form">
+			<form action="/" method="dialog" id="form" >
+				   <div class="input__name">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" value="">
+					</div>
+					<div class="input__surname">
+						<label for="surname">Surname:</label>
+						<input type="text" id="surname" name="surname" value="">
+					</div>
+					<div class="input__age">
+						<label for="age">Age:</label>
+						<input type="number" id="age" name="age" value="">
+					</div>
+					<div class="input__card">
+						<label for="card">Сard number:</label>
+						<input type="text" id="card" name="card" value="">
+					</div>
+					<div class="input__subscription_type">
+						<label for="subscription">Subscription type</label>
+						<select id="select" value="">
+							<option value="Фiтнес">Фiтнес</option>
+							<option value="Басейн">Басейн</option>
+							<option value="Тренажерний зал + фітнес">Тренажерний зал + фітнес</option>
+						</select>
+					</div>
+					<div class="input__button_redaction">
+						<button type="button" id="elemmm">Redaction</button>
+						<input type="number" id="index" placeholder="index:" name="index" value="">
+					</div>
+					<div class="input__button_delete">
+						<button type="button" id="elem_three" onclick="deleteItem()">delete</button>
+						<input type="number" id="index_three" placeholder="index:" name="index_three" value="">
+					</div>
+					<div class="input__button_player">
+						<button type="button" onclick="playerFindByNumber()">Find By Number</button>
+						<input type="number" id="index_four" placeholder="index:" name="index_four" value="">
+					</div>
+					<div class="input__button_player_Search">
+						<button type="button" onclick="SearchByName()">Search by name</button>
+						<input type="text" id="index_search" placeholder="name:" name="index_search" value="">
+					</div>
+					<div class="input__button_call">
+						<button type="submit" id="elem" onclick="callFunction()">Зберегти</button>
+						<button type="reset" onclick="deletee()">Очистити</button>
+						<button type="button" id="elemm">Список учасників</button>
+					</div>
+			</form>
+		</div>
+
+
+		<div class="container_text">
+
+		</div>
+	</div>
+
+	<script src="v1.js"></script>
+</body>
+
+</html>

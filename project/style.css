@@ -1,0 +1,161 @@
+*{ 
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+body{
+	margin: 0;
+	padding: 0;
+	background: url('spt1976.jpg') 50% no-repeat scroll;
+	color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 600px) {
+	.container_form {
+	transform: scale(0.7);
+}
+
+	
+}
+.container_form {
+	width: 100%;
+	height: 100vh;
+	max-width: 700px;
+	margin: 0 auto;
+
+	display: flex;
+	align-items: center;
+   flex-direction: column;
+	justify-content: space-evenly;
+
+	background-color: rgba(0, 0, 0, 0.294);
+
+}
+
+.box_form {
+	width: 450px;
+
+}
+.box_form div{
+	margin-top: 15px;
+display: flex;
+justify-content: space-between;
+padding: 0px 15px 0px;
+}
+input:nth-child(-n+3){
+	background-color: rgba(95, 95, 95, 0.733);
+	color: rgb(255, 255, 255);
+	border-radius: 20px;
+   padding: 7px 10px;
+	width: 200px;
+	font-family: 'Indie Flower', cursive;
+}
+
+::placeholder {
+	color: rgba(255, 238, 0, 0.801);
+	font-size: 1.2em;
+}
+
+button {
+	background-color: rgba(0, 0, 0, 0.596);
+	color: rgba(255, 251, 0, 0.89);
+
+	padding: 10px;
+	width: 150px;
+
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	text-transform: uppercase;
+
+	font-family: 'Kirang Haerang', cursive;
+	font-size: 16px;
+ }
+ button:hover{
+	transform: scale(1.1);
+	transition-duration: 0.5s;
+box-shadow: 0 0 10px ghostwhite;
+
+}
+button:active{
+	/* background-color: #CF0222FF; */
+	background-color:rgb(76, 151, 1);
+	transform: scale(1);transition-duration: 0.1s;
+}
+
+label{
+	font-family: 'Indie Flower', cursive;
+	font-size: 20px;
+}
+#select{
+	background-color: rgba(95, 95, 95, 0.733);
+	color: rgb(255, 255, 255);
+	border-radius: 20px;
+   padding: 7px 10px;
+	width: 200px;
+	color: rgba(255, 238, 0, 0.801);
+}
+option{
+	background-color: rgba(3, 3, 3, 0.733);
+}
+.input__name {
+
+}
+.input__surname {
+}
+.input__age {
+}
+.input__card {
+}
+.input__subscription_type {
+}
+.input__button_call {
+}
+.input__button_redaction {
+}
+.input__button_delete {
+}
+.input__button_player {
+}
+.input__button_player_Search {
+}
+.container_text {
+	color: rgb(223, 223, 223);
+	line-height: 18px;
+	word-spacing: 6px;
+	overflow: auto;
+	padding: 20px;
+	border-radius: 35px;
+	background-color: rgba(173, 146, 104, 0.383);
+	height: 210px;
+	width: 600px;
+	text-overflow: inherit ;
+	font-family: 'Permanent Marker', cursive;
+}
