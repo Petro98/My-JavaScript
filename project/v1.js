@@ -11,12 +11,12 @@ const form = document.getElementById('form')
 // масив відвідувачів===============================================
 let arrya = [];
 // список учасників==================================================
-document.querySelector("#elemm").onclick = function () {
+document.querySelector("#elemm").onclick = function(){
 	conclusion('')
 	console.log(arrya);
 	for (key of arrya) {
 		let index = arrya.indexOf(key) + 1
-		conclusionSum(('|| ' + "visitor " + ' ' +"№" + index))
+		conclusionSum(("visitor " + ' ' +"№" + index))
 		for (i in key) {
 			conclusionSum((' ' + key[i] + ''))
 		}
@@ -42,7 +42,12 @@ document.querySelector("#elemmm").onclick = function () {
 			surname.value = ''
 			age.value = ''
 			card.value = ''
-			arrya[indexlnArray] = nevPlayerData;
+			let sum = (arrya[indexlnArray] = nevPlayerData);
+			console.log(sum)
+			conclusion('')
+			for (i in sum) {
+				conclusionSum((' ' + sum[i] + ''))
+			}
 		}
 	}
 	index.value = ''
@@ -77,7 +82,14 @@ function deleteItem() {
 		indexx = index.value
 	function want(indexxx) {
 		if (indexxx > -1 && indexxx < arrya.length) {
-			arrya.splice(indexxx, 1);
+			let summ = arrya.splice(indexxx, 1),
+			summm = summ[0]
+			conclusion('')
+			conclusionSum('Member removed ' + ' №' + indexxx)
+			for (i in summm) {
+				conclusionSum((' ' + summm[i] + ''))
+			}
+			console.log(summm)
 		} else { }
 	}
 	want(indexx)

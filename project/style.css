@@ -32,6 +32,7 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 body{
+	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
 	background: url('spt1976.jpg') 50% no-repeat scroll;
@@ -75,7 +76,7 @@ input:nth-child(-n+3){
 	border-radius: 20px;
    padding: 7px 10px;
 	width: 200px;
-	font-family: 'Indie Flower', cursive;
+	/* font-family: 'Indie Flower', cursive; */
 }
 
 ::placeholder {
@@ -88,14 +89,14 @@ button {
 	color: rgba(255, 251, 0, 0.89);
 
 	padding: 10px;
-	width: 150px;
+	width: 170px;
 
 	border: none;
 	font: inherit;
 	cursor: pointer;
 	text-transform: uppercase;
 
-	font-family: 'Kirang Haerang', cursive;
+	/* font-family: 'Kirang Haerang', cursive; */
 	font-size: 16px;
  }
  button:hover{
@@ -111,9 +112,10 @@ button:active{
 }
 
 label{
-	font-family: 'Indie Flower', cursive;
+	/* font-family: 'Indie Flower', cursive; */
+	/* font-family: 'Kirang Haerang', cursive; */
 	font-size: 20px;
-	text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+	text-shadow: 1px 1px 2px rgb(109, 21, 21), 0 0 1em rgb(11, 11, 85), 0 0 0.2em rgb(17, 17, 116);
 }
 #select{
 	background-color: rgba(95, 95, 95, 0.733);
@@ -121,7 +123,7 @@ label{
 	border-radius: 20px;
    padding: 7px 10px;
 	width: 200px;
-	color: rgba(255, 238, 0, 0.801);
+	/* color: rgba(255, 238, 0, 0.801); */
 }
 option{
 	background-color: rgba(3, 3, 3, 0.733);
@@ -148,11 +150,11 @@ option{
 .input__button_player_Search {
 }
 .container_text {
-	font-size: 18px;
+	font-size: 19px;
 	text-align: center;
 	color: rgb(223, 223, 223);
-	line-height: 18px;
-	word-spacing: 3px;
+	line-height: 20px;
+	word-spacing: 2px;
 	overflow: auto;
 	padding: 10px;
 	border-radius: 35px;
@@ -160,9 +162,22 @@ option{
 	height: 210px;
 	width: 680px;
 	text-overflow: inherit ;
-	font-family: 'Permanent Marker', cursive;
+	/* font-family: 'Permanent Marker', cursive; */
+		font-family: 'Indie Flower', cursive;
+	/* font-family: 'Kirang Haerang', cursive; */
 }
 .container_text h1{
 margin-top: 10%;
 	font-size: 60px;
 }
+
+
+
+
+
+
+
+
+
+
+
