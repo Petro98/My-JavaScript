@@ -5,7 +5,7 @@ const person = {
 	surname: form.querySelector('[name="surname"]'),
 	age: form.querySelector('[name="age"]'),
 	card: form.querySelector('[name="card"]'),
-	select: form.querySelector('[id="select"]')
+	select: form.querySelector('[id="select"]'),
 };
 let textOutputFunction = (a) => (document.querySelector('.container_text').innerHTML = a);
 let conclusionSum = (a) => (document.querySelector('.container_text').innerHTML += a);
@@ -51,8 +51,10 @@ document.querySelector("#editing").onclick = function () {
 // saving data to an array ===================================================
 function savingDataToAnArray() {
 	let personName = form.querySelector('[name="name"]').value,
-	personAge = form.querySelector('[name="age"]').value;
-	let Cardd = form.querySelector('[name="card"]').value;
+	personAge = form.querySelector('[name="age"]').value,
+	personSurname = form.querySelector('[name="surname"]').value,
+	personCard = form.querySelector('[name="card"]').value,
+	Cardd = form.querySelector('[name="card"]').value;
 	if (personName != '' && personAge < 100 && personAge > 6 && Cardd.length > 4 && Cardd.length < 10 ) {
 		const values = {
 			name: person.name.value,
@@ -64,8 +66,6 @@ function savingDataToAnArray() {
 		arrya.push(values);
 		console.log("visitor" + arrya.length, values);
 	} else { textOutputFunction(('<h1>Enter the name</h1> <h1>(follow the input restrictions)</h1>')) };
-	let personSurname = form.querySelector('[name="surname"]').value;
-	let personCard = form.querySelector('[name="card"]').value;
 	for (let i = 0; i < arrya.length - 1; i++) {
 		let objectKey = arrya[i],
 		valuesSurnameName = objectKey.name + objectKey.surname,
