@@ -31,7 +31,7 @@
 						</div>
 						<div class="input__age">
 							<label for="age">Age:</label>
-							<input type="number" id="age" name="age" value="">
+							<input type="number" id="age" placeholder='7-99' name="age" value="">
 						</div>
 						<div class="input__card">
 							<label for="card">Сard number:</label>
@@ -46,7 +46,7 @@
 							</select>
 						</div>
 						<div class="input__button_redaction">
-							<button type="button" id="elemmm">Redaction</button>
+							<button type="button" id="editing">Redaction</button>
 							<input type="number" id="index" placeholder="number:" name="index" value="">
 						</div>
 						<div class="input__button_delete">
@@ -58,13 +58,13 @@
 							<input type="number" id="index_four" placeholder="number:" name="index_four" value="">
 						</div>
 						<div class="input__button_player_Search">
-							<button type="button" onclick="SearchByName()">Search by</button>
-							<input type="text" id="index_search" placeholder="name and surname" name="index_search" value="">
+							<button type="button" onclick="searchByName()">Search by</button>
+							<input type="text" id="index_search" placeholder="name, surname and card" name="index_search" value="">
 						</div>
 						<div class="input__button_call">
-							<button type="submit" id="elem" onclick="savingDataToAnArray()">save</button>
+							<button type="submit" onclick="savingDataToAnArray()">save</button>
 							<button type="reset" onclick="Delete()">to clean</button>
-							<button type="button" id="elemm">roster</button>
+							<button type="button" id="list">roster</button>
 						</div>
 				</form>
 			</div>
@@ -73,7 +73,7 @@
 		</div>
 	</div>
 
-	<script src="v1.js"></script>
+	<script src="script.js"></script>
 </body>
 
 </html>
