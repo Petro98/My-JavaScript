@@ -82,7 +82,7 @@ input:nth-child(-n+3){
 	border-radius: 20px;
    padding: 7px 10px;
 	width: 200px;
-	font-family: 'Indie Flower', cursive;
+	/* font-family: 'Indie Flower', cursive; */
 }
 
 ::placeholder {
@@ -151,8 +151,7 @@ option{
 }
 .container_text h1{
 	text-align: center;
-	line-height: 50px;
-/* margin-top: 10%; */
+	line-height: 60px;
 	font-size: 60px;
 }
 

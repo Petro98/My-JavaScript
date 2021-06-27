@@ -51,8 +51,9 @@ document.querySelector("#editing").onclick = function () {
 // saving data to an array ===================================================
 function savingDataToAnArray() {
 	let personName = form.querySelector('[name="name"]').value,
-	personAge = form.querySelector('[name="age"]').value
-	if (personName != '' && personAge < 100 && personAge > 6) {
+	personAge = form.querySelector('[name="age"]').value;
+	let Cardd = form.querySelector('[name="card"]').value;
+	if (personName != '' && personAge < 100 && personAge > 6 && Cardd.length > 4 && Cardd.length < 10 ) {
 		const values = {
 			name: person.name.value,
 			surname: person.surname.value,
@@ -62,7 +63,7 @@ function savingDataToAnArray() {
 		};
 		arrya.push(values);
 		console.log("visitor" + arrya.length, values);
-	} else { textOutputFunction(('<h1>Enter the name</h1> <h1>(your age should meet the limits)</h1>')) };
+	} else { textOutputFunction(('<h1>Enter the name</h1> <h1>(follow the input restrictions)</h1>')) };
 	let personSurname = form.querySelector('[name="surname"]').value;
 	let personCard = form.querySelector('[name="card"]').value;
 	for (let i = 0; i < arrya.length - 1; i++) {
