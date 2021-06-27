@@ -76,16 +76,16 @@ for(key of array){
 			if (key instanceof Object){
 				obj.object.push(key)
 			}
-	if ((typeof(key)) == 'bigint'){
+			if ((typeof(key)) == 'bigint'){
 				obj.bigInt.push(key)
 			}
 			console.log(typeof(key))
 }
 console.log(obj)
 }
-let sym = Symbol('foo')
+let sym = Symbol('&%')
 let undef;
-var array = ['vova','dog','yellow', 5 ,5 ,10 , true ,false, null ,undef , sym ,{name: 'Vova'},{name:'dog'},515616115511n]
+var array = ['vova','dog','yellow', 5 ,5 ,10 , true ,false, null ,undef , sym ,{name: 'Vova',obje : {name:'Ira'}},null,{name:'dog'},515616115511n,6546565161n]
 sortTheInputArray()
 
 
