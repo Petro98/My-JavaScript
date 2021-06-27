@@ -17,60 +17,59 @@
 </head>
 
 <body>
-	<div class="container_form">
-		<div class="box_form">
-			<form action="/" method="dialog" id="form" >
-				   <div class="input__name">
-					<label for="name">Name:</label>
-					<input type="text" id="name" name="name" value="">
-					</div>
-					<div class="input__surname">
-						<label for="surname">Surname:</label>
-						<input type="text" id="surname" name="surname" value="">
-					</div>
-					<div class="input__age">
-						<label for="age">Age:</label>
-						<input type="number" id="age" name="age" value="">
-					</div>
-					<div class="input__card">
-						<label for="card">Сard number:</label>
-						<input type="number" id="card" name="card" value="">
-					</div>
-					<div class="input__subscription_type">
-						<label for="subscription">Subscription type</label>
-						<select id="select" value="">
-							<option value="Фiтнес">Фiтнес</option>
-							<option value="Басейн">Басейн</option>
-							<option value="Тренажерний зал + фітнес">Тренажерний зал + фітнес</option>
-						</select>
-					</div>
-					<div class="input__button_redaction">
-						<button type="button" id="elemmm">Redaction</button>
-						<input type="number" id="index" placeholder="index:" name="index" value="">
-					</div>
-					<div class="input__button_delete">
-						<button type="button" id="elem_three" onclick="deleteItem()">delete</button>
-						<input type="number" id="index_three" placeholder="index:" name="index_three" value="">
-					</div>
-					<div class="input__button_player">
-						<button type="button" onclick="playerFindByNumber()">Find By Number</button>
-						<input type="number" id="index_four" placeholder="index:" name="index_four" value="">
-					</div>
-					<div class="input__button_player_Search">
-						<button type="button" onclick="SearchByName()">Search by name</button>
-						<input type="text" id="index_search" placeholder="name:" name="index_search" value="">
-					</div>
-					<div class="input__button_call">
-						<button type="submit" id="elem" onclick="callFunction()">save</button>
-						<button type="reset" onclick="deletee()">to clean</button>
-						<button type="button" id="elemm">roster</button>
-					</div>
-			</form>
-		</div>
-
-
-		<div class="container_text code_color">
-
+	<div class="font">
+		<div class="container_form">
+			<div class="box_form">
+				<form action="/" method="dialog" id="form" >
+						<div class="input__name">
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name" value="">
+						</div>
+						<div class="input__surname">
+							<label for="surname">Surname:</label>
+							<input type="text" id="surname" name="surname" value="">
+						</div>
+						<div class="input__age">
+							<label for="age">Age:</label>
+							<input type="number" id="age" name="age" value="">
+						</div>
+						<div class="input__card">
+							<label for="card">Сard number:</label>
+							<input type="number" id="card" name="card" value="">
+						</div>
+						<div class="input__subscription_type">
+							<label for="subscription">Subscription type</label>
+							<select id="select" value="">
+								<option value="Фiтнес">Фiтнес</option>
+								<option value="Басейн">Басейн</option>
+								<option value="Тренажерний зал + фітнес">Тренажерний зал + фітнес</option>
+							</select>
+						</div>
+						<div class="input__button_redaction">
+							<button type="button" id="elemmm">Redaction</button>
+							<input type="number" id="index" placeholder="number:" name="index" value="">
+						</div>
+						<div class="input__button_delete">
+							<button type="button" id="elem_three" onclick="deleteItem()">delete</button>
+							<input type="number" id="index_three" placeholder="number:" name="index_three" value="">
+						</div>
+						<div class="input__button_player">
+							<button type="button" onclick="playerFindByNumber()">Find By Number</button>
+							<input type="number" id="index_four" placeholder="number:" name="index_four" value="">
+						</div>
+						<div class="input__button_player_Search">
+							<button type="button" onclick="SearchByName()">Search by</button>
+							<input type="text" id="index_search" placeholder="name and surname" name="index_search" value="">
+						</div>
+						<div class="input__button_call">
+							<button type="submit" id="elem" onclick="savingDataToAnArray()">save</button>
+							<button type="reset" onclick="Delete()">to clean</button>
+							<button type="button" id="elemm">roster</button>
+						</div>
+				</form>
+			</div>
+			<div class="container_text code_color">
+			</div>
 		</div>
 	</div>
 
