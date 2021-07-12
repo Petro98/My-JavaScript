@@ -1,12 +1,7 @@
 const person = {
 	name: 'Petro',
 	sureName: 'Tsimbala',
-	age: 22,
-	height:185,
-	work:'Frontend',
 }
-
-console.log(person);
 function getPerson() {
 	let rand = ''
 	for (obj in this) {
@@ -19,7 +14,6 @@ function getPerson() {
 		console.log(`${obj.toUpperCase()}: ${this[obj]}`);
 	}
 }
-
 getPerson.call(person)
 // getPerson.bind(person)()
 
