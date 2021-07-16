@@ -71,12 +71,12 @@
 // console.log(Counter())
 
 // // 6-------------------------------
-const Bust = ((b) => (a) => {
-	for (a; a <= 5; a++) {
-		if (a % 2) console.log(a + b);
-	}
-})(5);
-Bust(0);
+// const Bust = ((b) => (a) => {
+// 	for (a; a <= 5; a++) {
+// 		if (a % 2) console.log(a + b);
+// 	}
+// })(5);
+// Bust(0);
 // // Side
 // let a = 5
 // function name(params) {
