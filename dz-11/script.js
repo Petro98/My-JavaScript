@@ -1,22 +1,22 @@
-// // 2 функція вищого порядку---------------------------
-// const arr = ['Denis' , 'Ivan' , 'Makss' ,'Olga']
-// function mapArray(arr , fu){
-// 	const res =[];
-// 	for (let i = 0; i < arr.length; i++) {
-// 		res.push(fu(arr[i]));
-// 	}
-// 	return res;
-// }
-// function nameLength(el) {
-// 	return el.length
-// }
-// function nameToUpperCase(el) {
-// 	return el.toUpperCase()
-// }
-// const rezaut = mapArray(arr , nameLength)
-// const rezaut2 = mapArray(arr , nameToUpperCase)
-// console.log(rezaut);
-// console.log(rezaut2);
+// 2 функція вищого порядку---------------------------
+const arr = ['Denis' , 'Ivan' , 'Makss' ,'Olga']
+function mapArray(arr , fu){
+	const res =[];
+	for (let i = 0; i < arr.length; i++) {
+		res.push(fu(arr[i]));
+	}
+	return res;
+}
+function nameLength(el) {
+	return el.length
+}
+function nameToUpperCase(el) {
+	return el.toUpperCase()
+}
+const rezaut = mapArray(arr , nameLength)
+const rezaut2 = mapArray(arr , nameToUpperCase)
+console.log(rezaut);
+console.log(rezaut2);
 
 // // 3 чиста функція ---------------------------
 // function a(b) {
