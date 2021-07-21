@@ -1,51 +1,57 @@
 let date1 = document.querySelector('[name="time1"]');
 let date2 = document.querySelector('[name="time2"]');
 let date3 = document.querySelector('[name="number"]');
-
 class Form {
 	constructor(date1, date2, date3) {
-		this.date1 = date1
-		this.date2 = date2
-		this.date3 = date3
-
+		this.date1 = date1;
+		this.date2 = date2;
+		this.date3 = date3;
 	}
 	fu() {
 		document.querySelector('#sur').addEventListener("click", this.retriveFormValue.bind(this))
 	}
 	retriveFormValue() {
-		let dateO = 0
-		let dateT = 0
-		const dateOne = this.date1.value.split('');
-		for (let i = 0; i < dateOne.length; i++) {
-			if (dateOne[i] != ':') {
-				dateO += dateOne[i]
+		let timeOne = Number(this.date1.value.split('').filter(i => i !== ':').join(''));
+		let timeTwo = Number(this.date2.value.split('').filter(i => i !== ':').join(''));
+		let arrNumbers = [];
+		if (timeTwo > timeOne) {
+			document.querySelector('.text').innerHTML = ''
+
+			for (let i = timeOne; i < timeTwo; i++) {
+				let itemlength = i.toString().length
+				if ((+i.toString()[2] < 6 && itemlength == 4)
+					|| (+i.toString()[1] < 6 && itemlength == 3)
+					|| (+i.toString()[0] < 6 && itemlength == 2)
+					|| itemlength == 1) arrNumbers.push(i)
 			}
-		}
-		const dateTwo = this.date2.value;
-		for (let i = 0; i < dateTwo.length; i++) {
-			if (dateTwo[i] != ':') {
-				dateT += dateTwo[i]
+
+			let arrNumbersTime = []
+			arrNumbers.map((i) => {
+				let res = i.toString().split('')
+				if (res.length == 3) {
+					res.unshift('0')
+				}
+				if (res.length == 2) {
+					res.unshift('00')
+				}
+				res.splice(-2, 0, ':')
+				if (res.length == 2) {
+					res.splice(0, 0, '00')
+					if (res.length == 3) {
+						res.splice(2, 0, '0')
+					}
+				}
+				arrNumbersTime.push(res.join(''))
+			})
+
+			let coeff = +this.date3.value;
+			for (let i = 0; i < arrNumbersTime.length; i = i + coeff) {
+				document.querySelector('.text').innerHTML += arrNumbersTime[i] + '<br>'
 			}
-		}
-		dateO = +dateO
-		dateT = +dateT
-		let resaut = []
-		let coeff = +this.date3.value
-		console.log(coeff);
-		for (let i = dateO; i < dateT; i = i + coeff) {
-			let a = i.toString()[2]
-			let b = +a
-			if (b < 6) {
-				resaut.push(i)
-			}
-		}
-		for (let i = 0; i < resaut.length; i++) {
-			let res = resaut[i]
-			res = res.toString().split('')
-			res.splice(2, 0, ':')
-			document.querySelector('.text').innerHTML += res.join('') + '<br>'
+		} else {
+			alert('ти що йолуп?')
 		}
 	}
 }
 let form = new Form(date1, date2, date3)
-
+form.fu()
