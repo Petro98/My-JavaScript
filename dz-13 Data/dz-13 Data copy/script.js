@@ -22,11 +22,12 @@ class Form {
 				let objBox = document.querySelector('.text');
 				let objBotton = document.querySelector('button');
 				obj.setAttribute("style", "box-shadow: 0 0 10px green;")
-				objBox.setAttribute("style", "border: thick double green;")
+				objBox.setAttribute("style", "align-items: flex-end; border: thick double green;")
 				objBotton.setAttribute("style", "color: green;")
 				let objl = document.querySelector('body');
-				objl.setAttribute("style", "background-color: rgb(58, 75, 73);")
+				objl.setAttribute("style", "background: linear-gradient(21deg, #dd03e4, #5611ec)")
 			})()
+
 			document.querySelector('.text').innerHTML = ''
 			for (let i = timeOne; i < timeTwo; i++) {
 				let itemlength = i.toString().length
@@ -54,32 +55,43 @@ class Form {
 			let i = 0;
 			let coeff = +this.date3.value;
 			let speed = +this.date4.value;
+
 			let mySet = setInterval(function () {
 				document.querySelector('.text').innerHTML += arrNumbersTime[i] + '<br>'
 				console.log(arrNumbersTime[i]);
 				i = i + coeff
 				if (arrNumbersTime.length <= i) {
 					stail()
-					alert('Finish')
 					clearInterval(mySet)
+					let objj = document.querySelector('.text');
+					objj.setAttribute("style", "align-items: flex-start;")
 				}
 			}, 6000 / speed)
+
 		} else {
-			document.querySelector('.text').innerHTML = 'Ти що йолуп?!!'
-			setTimeout(() => {
-				(() => {
+			const P = new Promise((resolve, reject) => {
+				document.querySelector('.text').innerHTML = 'Перше число повинно бути бліьше другого!!!'
+				setTimeout(() => {
 					let obj = document.querySelector('body');
 					obj.setAttribute("style", "background-color: red;")
 					let objBox = document.querySelector('.text');
 					objBox.setAttribute("style", "border: thick double red;")
 					let objBotton = document.querySelector('button');
 					objBotton.setAttribute("style", "color: red;")
-				})()
-				document.querySelector('.text').innerHTML = 'Перше число повинно бути бліьше другого!!!'
-				setTimeout(() => {
-					stail()
-				}, 6000);
-			}, 2500);
+					document.querySelector('.text').innerHTML = 'НЕ КОРЕКТНИЙ ВВІД?!!'
+					let fu = stail
+					resolve(fu)
+				}, 2500)
+			})
+			P.then(fu => {
+				return new Promise((resolve, reject) => {
+					setTimeout(() => {
+						fu()
+						let text = 'Будь уважний!!!'
+						resolve(text)
+					}, 6000);
+				})
+			}).then(text => document.querySelector('.text').innerHTML = text)
 		}
 		function stail() {
 			let obj = document.querySelector('.container');
