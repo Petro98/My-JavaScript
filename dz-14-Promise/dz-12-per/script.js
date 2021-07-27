@@ -5,16 +5,12 @@ const P = new Promise((res, rej) => {
 				let resaut = a + b + c / 2 * h
 				return resaut
 			}
-		}
-		let calculationOne = calculation(1, 2, 3, 5)();
-		let calculationTwo = calculation(7, 2, 3, 5)();
-		let calculationThree = calculation(1, 2, 1, 5)();
-		let calculationFour = calculation(1, 2, 1, 5)();
-		let calculationFive = calculation(5, 4, 7, 5)();
-		let arrCalculation = [calculationOne, calculationTwo, calculationThree, calculationFour, calculationFive]
-		let smallestValue = arrCalculation
-			.reduce((acc, item) => {
-				if (!isNaN(item)) {
+		} 
+		let arrCalculation = []
+		arrCalculation.push(calculation(1, 2, 3, 5)(),calculation(1, 2, 3, 5)(),calculation(1, 2, 1, 5)(),calculation(1, 2, 1, 5)(),calculation(5, 4, 7, 5)())
+		
+		let smallestValue = arrCalculation.reduce((acc, item) => {
+				    if (!isNaN(item)) {
 					if (acc > item) {
 						return item
 					} else {
@@ -24,6 +20,7 @@ const P = new Promise((res, rej) => {
 					return item
 				}
 			})
+
 		if (smallestValue >= 0 && smallestValue) {
 			arrCalculation.filter((i) => isNaN(i))
 			res(arrCalculation)
@@ -37,4 +34,6 @@ const P = new Promise((res, rej) => {
 	console.log(new Error(name));
 }).finally(() => {
 	console.log('Програма завершена');
+}).then(()=>{
+	console.log( 'sssllsl');
 })

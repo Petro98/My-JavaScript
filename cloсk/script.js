@@ -1,6 +1,7 @@
 const deg = 6;
 const hr = document.querySelector('#hr')
 const sc = document.querySelector('#sc')
+const mn = document.querySelector('#mn')
 
 setInterval(() => {
 	let day = new Date();
@@ -13,18 +14,18 @@ setInterval(() => {
 	sc.style.transform = `rotateZ(${ss}deg)`
 })
 
-const fu = (() => {
-	let ii = 0
-	return function name() {
-		console.log(ii);
-		return ii++
-	}
-})()
-const SET = setInterval(() => {
-	if (fu() >= 200) {
-		clearInterval(SET)
-	}
-},44)
+// const fu = (() => {
+// 	let ii = 0
+// 	return function name() {
+// 		console.log(ii);
+// 		return ii++
+// 	}
+// })()
+// const SET = setInterval(() => {
+// 	if (fu() >= 200) {
+// 		clearInterval(SET)
+// 	}
+// },44)
 
 
 // function name(fu, b) {
